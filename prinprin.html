@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Surpresa para Você!</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      background-color: #ff00ff;
+      margin: 50px;
+    }
+    #surpresa {
+      font-size: 20px;
+      color: #ffffff;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+    #botaoSurpresa {
+      background-color: #ff6699;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+    <h1 style="font-size: 27px; color: #ffffff; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Surpresa para Maryzinha, minha princesa!</h1>
+<div id="surpresa" style="font-family: cursive, Times, serif;"></div>
+<button id="botaoSurpresa" onclick="mostrarSurpresa()">Clique Aqui!</button>
+<script>
+  function mostrarSurpresa() {
+    var mensagens = [
+      "Oi amor, " +
+      "só queria dizer o quanto você é incrível. Você faz meu coração dar cambalhotas e meu sorriso aparecer do nada. É como se você trouxesse todo esse brilho para os meus dias. " +
+      "Cada momento com você é como um daqueles filmes românticos, mas melhor, porque é real. Não tem preço. É tipo um combo de comédia romântica e ação, só que na vida real. " +
+      "Você é o meu raio de sol em dias nublados, a minha playlist preferida e a melhor parte do meu dia. Só queria que soubesse o quanto te amo. " +
+      "Espero que tenha gostado da surpresa, assinado, Malezan"
+    ];
+    var indiceMensagem = Math.floor(Math.random() * mensagens.length);
+    var mensagem = mensagens[indiceMensagem];
+    document.getElementById("surpresa").innerHTML = mensagem;
+  }
+</script>
+</body>
+</html>
